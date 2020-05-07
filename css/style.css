@@ -34,9 +34,6 @@ body{
     background: url("../img/125-512.png") no-repeat;
     background-size: contain;
     background-position: 50%;
-    outline: none;
-    clip:auto;
-
 }
 @keyframes thunderbolt{
     0%{transform: scale(8) ;z-index: 1;}
@@ -47,17 +44,17 @@ p{
     color: white;
 }
 @keyframes distorted{
-    0%{transform: rotateZ(20deg);box-shadow: 0rem 0px 0px 0 pink inset;}
+    0%{transform: rotateZ(20deg);box-shadow: 0em 0px 0px 0 pink inset;}
     25%{transform: rotateZ(-15deg);}
     50%{transform: rotateZ(10deg);  }
     75%{transform: rotateZ(-5deg);  }
-    100%{transform: rotateZ(0deg);   box-shadow: 4.3rem 0px 0px 0 pink inset;}
+    100%{transform: rotateZ(0deg);   box-shadow: 4.3em 0px 0px 0 pink inset;}
 
 }
 .navbar{
     top:0;
     position: sticky;
-    padding-left:2rem
+    padding-left:2em
 }
 @font-face {
     font-family: "CustomFont";
@@ -71,7 +68,7 @@ p{
 .navbar h2{
     font-family: "CustomFont", cursive, sans-serif;
     font-weight: 100;
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.1em;
     font-size: 3vmax;
 }
 
@@ -87,7 +84,7 @@ p{
     justify-content: flex-end;
 }
 .footer ul li{
-    padding: 0 0.9rem;
+    padding: 0 0.9em;
     text-transform: capitalize;
 }
 .main{
@@ -103,7 +100,7 @@ p{
     font-family: "comic", cursive, sans-serif;
     background: hsla(0,0%,100%,.1);
     border-radius: 15% 0 /100%;
-    border: 0.2rem solid white;
+    border: 0.2em solid white;
     color: white;
     text-align: inherit;
 }
@@ -111,5 +108,5 @@ p{
     font-family: "comic", cursive, sans-serif;
     background-color: white;
     border-radius: 5px;
-    border: 0.2rem solid white;
+    border: 0.2em solid white;
 }
