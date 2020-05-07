@@ -1,0 +1,121 @@
+body{
+    margin:0;
+    padding: 0;
+    clip: auto;
+    color: white;
+    background-color: #EF543D;
+    background-image:url("../img/125-512.png") no-repeat;
+    background-position: calc(50% - 20px) calc(50% - 10px);
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    position: relative; 
+    top: 0;
+    width: 99vw;
+    margin: 0;
+    height: 99vh;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background:url(../img/hiclipart.com.png) no-repeat;
+    background-size: contain;
+    clip:auto;
+    outline: none;
+    background-position: 50%;
+}
+.wrapper::before{
+    content: ''; /* To generate the box */ 
+    position: absolute; 
+    top: 0;
+    max-width: 99vw;
+    max-height: 99vh;
+    margin: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    animation: thunderbolt 1s ease  forwards;
+    background: url("../img/125-512.png") no-repeat;
+    background-size: contain;
+    background-position: 50%;
+    outline: none;
+    clip:auto;
+}
+@keyframes thunderbolt{
+    0%{transform: scale(8) ;z-index: 1;}
+    40%{z-index: 1;}
+    100%{transform: scaleX(1.3) ;z-index: -1;}
+}
+p{
+    color: white;
+}
+@keyframes distorted{
+    0%{transform: rotateZ(20deg);box-shadow: 0rem 0px 0px 0 pink inset;}
+    25%{transform: rotateZ(-15deg);}
+    50%{transform: rotateZ(10deg);  }
+    75%{transform: rotateZ(-5deg);  }
+    100%{transform: rotateZ(0deg);   box-shadow: 4.3rem 0px 0px 0 pink inset;}
+
+}
+.navbar{
+    top:0;
+    position: sticky;
+    padding-left:2rem
+}
+@font-face {
+    font-family: "CustomFont";
+    src: url("../font/RibeyeMarrow-Regular.ttf");
+    }
+@font-face {
+    font-family: "comic";
+    src: url("../font/SF_Cartoonist_Hand_Bold.ttf");
+    }
+
+.navbar h2{
+    font-family: "CustomFont", cursive, sans-serif;
+    font-weight: 100;
+    letter-spacing: 0.1rem;
+    font-size: 3vmax;
+}
+
+.footer{
+    position: sticky;
+    position: -webkit-sticky;
+    bottom:0;
+}
+.footer ul{
+    cursor: pointer;
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+}
+.footer ul li{
+    padding: 0 0.9rem;
+    text-transform: capitalize;
+}
+.main{
+    font-size: 200%;
+    text-align: center;
+    word-wrap: break-word;
+    align-self: center;
+    padding: 0 12%;
+    
+}
+
+.main form input{
+    font-family: "comic", cursive, sans-serif;
+    background: hsla(0,0%,100%,.1);
+    border-radius: 15% 0 /100%;
+    border: 0.2rem solid white;
+    color: white;
+    text-align: inherit;
+}
+.main form button{
+    font-family: "comic", cursive, sans-serif;
+    background-color: white;
+    border-radius: 5px;
+    border: 0.2rem solid white;
+}
