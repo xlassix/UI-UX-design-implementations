@@ -13,36 +13,30 @@ body{
     justify-content: space-between;
     box-sizing: border-box;
     position: relative; 
-    top: 0;
     width: 99vw;
-    margin: 0;
     height: 99vh;
-    right: 0;
-    bottom: 0;
-    left: 0;
     background:url(../img/hiclipart.com.png) no-repeat;
     background-size: contain;
     clip:auto;
     outline: none;
     background-position: 50%;
+    overflow: hidden;
 }
 .wrapper::before{
     content: ''; /* To generate the box */ 
     position: absolute; 
-    top: 0;
     max-width: 99vw;
     max-height: 99vh;
     margin: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    right: 0;bottom: 0;left: 0;  top: 0;
     z-index: -1;
-    animation: thunderbolt 1s ease  forwards;
+    animation: thunderbolt 1500ms ease  forwards;
     background: url("../img/125-512.png") no-repeat;
     background-size: contain;
     background-position: 50%;
     outline: none;
     clip:auto;
+
 }
 @keyframes thunderbolt{
     0%{transform: scale(8) ;z-index: 1;}
