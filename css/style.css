@@ -2,7 +2,11 @@ body{
     padding:0;
     margin: 0;
     background-color: #DDDDDC;
-}
+    height: 100vh;
+    position: relative;
+    width: 100vw;
+    box-sizing: border-box;
+    }
 header{
     display: flex;
     margin:0.2em;
@@ -13,11 +17,15 @@ header div:nth-child(1){
     text-align: center;
     font-size: 1.5vw;
     text-transform: uppercase;
+    position: relative;
+    animation: left-anime 1s ease-in;
 }
 header div:nth-child(2){
     width: 50%;
     text-align: right;
     font-size: 6vw;
+    position: relative;
+    animation: right-anime 1s ease-in;
 }
 
 .header-text{
@@ -43,9 +51,10 @@ section{
     max-width: 60%;
     display: flex;
     flex-direction: column;
+    position: relative;
+    animation: left-anime 1s ease-in;
 }
 .main_1 img{
-    flex-shrink: 0;
     min-width: 100%;
     min-height: 100%
 }
@@ -54,6 +63,8 @@ section{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: relative;
+    animation: right-anime 1s ease-in;
 }
 .min{
     display: flex;
@@ -76,15 +87,23 @@ section :nth-child(2){
 }
 .move-in .line:nth-of-type(2n+1) {
     color: black;
-    animation: fit 2s ease;
+    animation: fit 1s ease;
 }
 .move-in .line:nth-of-type(2n) {
     color:black;
-    animation: fit-left 2s ease;
+    animation: fit-left 1s ease;
 }
 @keyframes fit{
     0%{word-spacing: 1em;}
     100%{word-spacing: normal;}
+}
+@keyframes left-anime{
+    from {left:-100px; opacity:0 } 
+    to { left:0px; opacity:1 }
+}
+@keyframes right-anime{
+    from {right:-100px; opacity:0 } 
+    to { right:0px; opacity:1 }
 }
 @keyframes fit-left{
     0%{padding-left: 3rem;}
@@ -127,4 +146,5 @@ nav h6{
   }
   nav{
       height: 20px;
+      margin: 1em;
   }
