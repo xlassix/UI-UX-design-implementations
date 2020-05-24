@@ -59,14 +59,14 @@ section{
     display: flex;
     align-items: flex-end;
 }
-.min p{
+.sub p{
     font-size: 1.6vw;
 }
 .sub{
     width: 90%;
 }
 .big-letter{
-    font-size: 6.6vw!important;
+    font-size: 6.6vw;
 }
 section :nth-child(2){
     width: 40%;
