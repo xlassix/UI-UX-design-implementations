@@ -7,6 +7,7 @@ body{
     width: 100vw;
     box-sizing: border-box;
     }
+
     nav{
         margin:0.5em;
         display: flex;
@@ -60,6 +61,7 @@ header div:nth-child(1){
     position: relative;
     animation: left-anime 1s ease-in;
 }
+
 header div:nth-child(2),nav .author{
     display: none;
 }
@@ -152,10 +154,6 @@ section :nth-child(2){
     0%{padding-left: 3rem;}
     100%{padding: normal;}
 }
-
-
-
-
 @media screen and (max-width:375px){
     header,section {
         flex-direction: column;
