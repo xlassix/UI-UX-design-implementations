@@ -7,29 +7,74 @@ body{
     width: 100vw;
     box-sizing: border-box;
     }
+
+    nav{
+        margin:0.5em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    nav h6{
+        text-align: center;
+    }
+    /* menu icon style and animation */
+    .menu {
+        display: flex;
+        cursor: pointer;
+        flex-direction: column;
+      }
+      .bar1, .bar2, .bar3 {
+        width: 35px;
+        height: 2px;
+        margin: 2px 0;
+        background-color: #333;
+        transition: 0.4s;
+      }
+      .change .bar1 {
+        position: absolute;
+        -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+        transform: rotate(-45deg);
+        top:15px;
+      }
+      .change .bar2 {opacity: 0; position: relative;}
+      .change .bar3 {
+        position: absolute;
+        -webkit-transform: rotate(45deg) translate(-8px, -8px);
+        transform: rotate(45deg);
+        top: 15px;
+      }
+      nav{
+          height: 20px;
+          margin: 1em;
+      }
 header{
     display: flex;
     margin:0.2em;
     align-items: flex-end;
 }
+
 header div:nth-child(1){
     width: 50%;
     text-align: center;
-    font-size: 1.5vw;
+    font-size: 1.0vw;
     text-transform: uppercase;
     position: relative;
     animation: left-anime 1s ease-in;
 }
-header div:nth-child(2){
+
+header div:nth-child(2),nav .author{
+    display: none;
+}
+header div:nth-child(3){
     width: 50%;
     text-align: right;
-    font-size: 6vw;
+    font-size: 5vw;
     position: relative;
     animation: right-anime 1s ease-in;
 }
 
 .header-text{
-    font-size: 6vw;
+    font-size: 5vw;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -109,42 +154,51 @@ section :nth-child(2){
     0%{padding-left: 3rem;}
     100%{padding: normal;}
 }
-nav{
-    margin:0.5em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+@media screen and (max-width:375px){
+    header,section {
+        flex-direction: column;
+        text-align: center;
+    }
+    header div:nth-child(3), .main_1,.main_2 {
+        min-width: 100%;
+        text-align: center;
+    }
+    header div:nth-child(3){
+        font-size: 11vw;
+    }
+    .main_1{
+        flex-direction: column-reverse;
+    }
+    .main_1 div{
+        font-size: 1vw;
+    }
+    header div:nth-child(1){
+        display: none;
+    }
+    header div:nth-child(2),nav .author{
+        display: block;
+    }
+    header div:nth-child(2){
+        padding: 2em 1em 1em;
+    }
+    nav .author{
+        font-size: 2.2vw;
+        text-transform: uppercase;
+    }
+    .move-in{
+        width: 40%;
+        text-align: left;
+        align-self: flex-end;
+        margin: 1em;
+    }
+    .sub{
+        max-width: 57%;
+        text-align: left;
+    }
+    .sub p{
+        font-size: 4vw;
+    }
+    .big-letter{
+        font-size: 12vw;
+    }
 }
-nav h6{
-    text-align: center;
-}
-/* menu icon style and animation */
-.menu {
-    display: flex;
-    cursor: pointer;
-    flex-direction: column;
-  }
-  .bar1, .bar2, .bar3 {
-    width: 35px;
-    height: 2px;
-    margin: 2px 0;
-    background-color: #333;
-    transition: 0.4s;
-  }
-  .change .bar1 {
-    position: absolute;
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-    transform: rotate(-45deg);
-    top:15px;
-  }
-  .change .bar2 {opacity: 0; position: relative;}
-  .change .bar3 {
-    position: absolute;
-    -webkit-transform: rotate(45deg) translate(-8px, -8px);
-    transform: rotate(45deg);
-    top: 15px;
-  }
-  nav{
-      height: 20px;
-      margin: 1em;
-  }
